@@ -26,7 +26,7 @@ imagepath = 'wordcloud.png'
 if os.path.exists(imagepath):
     os.remove(imagepath)
 # 循环读取页数
-for click in range(10):
+for click in range(2):
     divs = driver.find_elements_by_css_selector('.itm')
     for div in divs:
         cnt = div.find_element_by_css_selector('.cnt.f-brk').text
@@ -56,10 +56,11 @@ wc = wordcloud.WordCloud(
     width=500,
     height=400,
     background_color='white',
-    font_path='/Library/Fonts/Arial Unicode.ttf',
+    font_path='msyh.ttc',
+    # font_path='/Library/Fonts/Arial Unicode.ttf',
     scale=15,
     # mask=img,
-    stopwords=set([line.strip() for line in open('stopwords.txt', mode='r').readlines()])
+    stopwords=set([line.strip() for line in open('stopwords.txt', mode='r', encoding='utf-8').readlines()])
 )
 print("正在制作词云图...")
 wc.generate(txt_str)
