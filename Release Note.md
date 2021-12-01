@@ -110,4 +110,4 @@ plt.show()python
 
 根据飙升榜歌曲《小雨天气》前10页评论生成的词云
 
-<img src="/Users/stanley.chen/Develop/Python/NeteaseAnalysis/wordcloud.png" alt="wordcloud" style="zoom:10%;" />}
+<img src="wordcloud.png" alt="wordcloud" style="zoom:10%;" />}
